@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import "./foodCard.scss";
-import { CartContext } from "../CartContext"; 
-const FoodCard = (props) => {
+import "./combo.scss";
+import { CartContext } from "../../CartContext"; 
+const Combo = (props) => {
     const { addToCart } = useContext(CartContext); 
     const [isAdded, setIsAdded] = useState(false);
 
@@ -29,4 +29,4 @@ const FoodCard = (props) => {
     );
 };
 
-export default FoodCard;
+export default Combo;

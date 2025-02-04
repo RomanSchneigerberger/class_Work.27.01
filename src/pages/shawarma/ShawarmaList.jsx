@@ -1,10 +1,10 @@
 import React from 'react';
-import FoodCard from './FoodCard';
-import img from './img/photo.png';
-import './foodCardList.scss'
+import Shawarma from './Shawarma';
+import img from './img/shaurma.jpg';
+import './shawarmaList.scss'
 
 
-const FoodCardList = () => {
+const ShawarmaList = () => {
     const items = [
         { 
             id: 1,
@@ -52,10 +52,10 @@ const FoodCardList = () => {
     
     return (
         <div className='container'>
-            <h1>Бургеры</h1>
+            <h1>Шаурма</h1>
             <div className='list'>
                 {items.map((card) => (
-                    <FoodCard 
+                    <Shawarma 
                     id={card.id} 
                     price={card.price}
                     title={card.title} 
@@ -68,4 +68,4 @@ const FoodCardList = () => {
     );
 };
 
-export default FoodCardList;
+export default ShawarmaList;

@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
-import "./foodCard.scss";
-import { CartContext } from "../CartContext"; 
-const FoodCard = (props) => {
+import "./snacks.scss";
+import { CartContext } from "../../CartContext"; 
+
+const Snacks = (props) => {
     const { addToCart } = useContext(CartContext); 
     const [isAdded, setIsAdded] = useState(false);
 
@@ -29,4 +30,4 @@ const FoodCard = (props) => {
     );
 };
 
-export default FoodCard;
+export default Snacks;

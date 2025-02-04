@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./foodCard.scss";
-import { CartContext } from "../CartContext"; 
+import { CartContext } from "./CartContext"; 
 const FoodCard = (props) => {
     const { addToCart } = useContext(CartContext); 
     const [isAdded, setIsAdded] = useState(false);
