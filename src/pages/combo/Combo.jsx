@@ -1,17 +1,26 @@
 import React, { useContext, useState } from "react";
 import "./combo.scss";
 import { CartContext } from "../../CartContext"; 
-const Combo = (props) => {
+import { useNavigate } from 'react-router-dom';
+
+const Combo= (props) => {
     const { addToCart } = useContext(CartContext); 
     const [isAdded, setIsAdded] = useState(false);
+    let navigate = useNavigate(); // функция для изменения адресной строки, или переадресация
+
 
     const handleAddToCart = () => {
         addToCart(props.id); 
         setIsAdded(true);
     };
 
+    const handleCLick = (url) => {
+        localStorage.setItem('singleItem', JSON.stringify(props));
+        navigate(`/combo/${url}`); // here we nagigate user to some route
+    }
+
     return (
-        <div className="card">
+        <div className="card" onClick={() => handleCLick(props.url)}>
             <img src={props.img} alt={props.title} />
 
             <div>

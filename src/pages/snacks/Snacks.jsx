@@ -15,7 +15,8 @@ const Snacks = (props) => {
     };
 
     const handleCLick = (url) => {
-        navigate(`/snacks/${url}`); // here we nagigate user to some route
+        localStorage.setItem('singleItem', JSON.stringify(props));
+        navigate(`/snack/${url}`); // here we nagigate user to some route
     }
 
     return (

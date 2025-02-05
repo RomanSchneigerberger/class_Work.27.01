@@ -24,15 +24,24 @@ const App = () => {
             <Cart />
             <Routes>
               <Route path='/' index element={<FoodCardList />} />
+              <Route path='/burgers' index element={<FoodCardList />} />
+              <Route path='/burger/:id'  element={<SingleItem />} />
               <Route path='/snacks' element={<SnacksList />} />
-              <Route path='/snacks/:id'  element={<SingleItem />} />
+              <Route path='/snack/:id'  element={<SingleItem />} />
               <Route path='/hot-dogs' element={<HotDogList />} />
+              <Route path='/hot-dog/:id'  element={<SingleItem />} />
               <Route path='/combo' element={<ComboList />} />
+              <Route path='/combo/:id'  element={<SingleItem />} />
               <Route path='/shawarma' element={<ShawarmaList />} />
+              <Route path='/shawerma/:id'  element={<SingleItem />} />
               <Route path='/pizza' element={<FoodCardList />} />
+              <Route path='/pizza/:id'  element={<SingleItem />} />
               <Route path='/wok' element={<FoodCardList />} />
+              <Route path='/wok/:id'  element={<SingleItem />} />
               <Route path='/deserts' element={<FoodCardList />} />
+              <Route path='/desert/:id'  element={<SingleItem />} />
               <Route path='/souces' element={<FoodCardList />} />
+              <Route path='/souce/:id'  element={<SingleItem />} />
             </Routes>
           </div>
         </CartProvider>
