@@ -29,29 +29,29 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      
-    <div className="header">
-    <h2>Корзина</h2>
-    <button className="total-quantity-btn">{totalQuantity}</button> {/* Кнопка для общего количества */}
-    </div>
-    <div>    <hr />   </div>
-    {items.map((item, index) => (
-    <React.Fragment key={item.id}>
-    <CartItem item={item} onUpdateQuantity={updateQuantity} />
-    {index < items.length - 1 && <hr className="divider" />} {/* Черта после каждого элемента, кроме последнего */}
-    </React.Fragment>
-    ))}
+
+      <div className="header">
+        <h2>Корзина</h2>
+        <button className="total-quantity-btn">{totalQuantity}</button> {/* Кнопка для общего количества */}
+      </div>
+      <div>    <hr />   </div>
+      {items.map((item, index) => (
+        <React.Fragment key={item.id}>
+          <CartItem item={item} onUpdateQuantity={updateQuantity} />
+          {index < items.length - 1 && <hr className="divider" />} {/* Черта после каждого элемента, кроме последнего */}
+        </React.Fragment>
+      ))}
       <div>    <hr />   </div>
       <h3 className="cart-total">
         Итого: <span className="total-value">{total}₽</span>
       </h3>
       <button className="start-quantity-btn">Оформить заказ</button>
       <div className="footer">
-      <img src={icon} alt="Бесплатная доставка" />
-      <strong className="footer-text">Бесплатная доставка</strong>
+        <img src={icon} alt="Бесплатная доставка" />
+        <strong className="footer-text">Бесплатная доставка</strong>
       </div>
     </div>
-    
+
   );
 };
 
